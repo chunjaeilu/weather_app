@@ -1,1 +1,44 @@
 /* style.js */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  max-width: 500px;
+  text-align: center;
+  /* outline: 1px solid #ccc; */
+  color: #fff;
+}
+
+#app h1 {
+  margin-bottom: 1em;
+}
+.city_name {
+  font-size: 2rem;
+}
+
+.temp {
+  font-size: 4rem;
+}
+.desc {
+  font-size: 2rem;
+}

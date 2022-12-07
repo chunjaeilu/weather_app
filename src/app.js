@@ -15,7 +15,7 @@ fetch(API_URL)
     const name = data.name;
     const desc = data.weather[0].main; // 날씨상태 설명
     const icon = data.weather[0].icon; // 날씨상태 아이콘
-    const temp = Math.floor((data.main.temp - 273.15) * 100) / 100; // 현재온도
+    const temp = Math.floor((data.main.temp - 273.15) * 10) / 10; // 현재온도
     console.log(name, desc, icon, temp);
 
     const nameEl = document.querySelector(".city_name");
@@ -23,8 +23,10 @@ fetch(API_URL)
     const iconEl = document.querySelector(".icon");
     const tempEl = document.querySelector(".temp");
 
+    let iconurl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
     nameEl.innerHTML = name;
     descEl.innerHTML = desc;
-    iconEl.innerHTML = `<img src="${icon}" alt="아이콘">`;
-    tempEl.innerHTML = `${temp}&deg;`;
+    iconEl.innerHTML = `<img src="${iconurl}" alt="아이콘">`;
+    tempEl.innerHTML = `${temp}&deg;c`;
   });

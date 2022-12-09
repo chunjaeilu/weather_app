@@ -34,7 +34,7 @@ function showWeatherData(data) {
   const iconEl = document.querySelector(".icon");
   const tempEl = document.querySelector(".temp");
 
-  let iconurl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  let iconurl = `./src/images/${icon}.svg`;
 
   nameEl.innerHTML = name;
   descEl.innerHTML = desc;
